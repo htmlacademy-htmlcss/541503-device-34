@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2"),
+    url("../fonts/rubik/rubik-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2"),
+    url("../fonts/rubik/rubik-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2"),
+    url("../fonts/raleway/raleway-extra-bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 1200px;
+  min-height: 100%;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  font-style: normal;
+  word-break: break-word;
+  color: #444444;
+
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 1200px;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-small {
+  margin: 0 auto;
+  width: 1040px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.index-main,
+.catalog-main {
+  flex-grow: 1;
+}
+
+.page-header a:focus,
+.page-header button:focus,
+.index-main a:focus,
+.catalog-main a:focus,
+.index-main button:focus,
+.catalog-main button:focus,
+.catalog-main select:focus,
+.index-main input:focus,
+.catalog-main input:focus,
+.page-footer a:focus,
+.delivery-form input:focus,
+.delivery-form button:focus {
+  outline: none;
+}
+
+.page-header button,
+.index-main button,
+.catalog-main button,
+.delivery-form button {
+  cursor: pointer;
+}
+
+.page-header {
+  padding-top: 19px;
+
+  background-color: #ffe17f;
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 41px, #ffe17f 41px, #ffe17f 100%);
+}
+
+.page-header a {
+  padding: 5px;
+}
+
+.page-header .header-logo-link {
+  padding-left: 0;
+}
+
+.search-input {
+  min-width: 359px;
+  min-height: 40px;
+  padding: 10px 48px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+
+  background-color: transparent;
+}
+
+.search-input::placeholder {
+  color: #000000;
+}
+
+.search-btn {
+  width: 160px;
+  padding: 10px 56px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+
+  background-color: transparent;
+}
+
+.user-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.user-menu-item {
+  margin-left: 8px;
+}
+
+.user-menu .user-menu-item:first-child {
+  display: none;
+}
+
+.user-menu-logged-in .user-menu-item:first-child {
+  display: block;
+}
+
+.user-menu-logged-in .user-menu-item:nth-child(2),
+.user-menu-logged-in .user-menu-item:nth-child(3) {
+  display: none;
+}
+
+.page-header .user-menu-item:first-child,
+.page-header .user-menu-item:nth-child(2) {
+  margin-left: 0;
+  padding-left: 4px;
+}
+
+.user-menu-item:first-child,
+.user-menu-item:nth-child(3) {
+  margin-right: auto;
+}
+
+.user-menu-item:nth-child(3) {
+  margin-left: 18px;
+}
+
+.user-menu-item:nth-child(4) {
+  margin-left: 15px;
+}
+
+.user-menu-item:nth-child(5),
+.user-menu-item:last-child {
+  padding-right: 0;
+}
+
+.user-menu-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.user-menu-exit-link {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.cart-popover {
+  width: 320px;
+  padding-bottom: 20px;
+
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.cart-items-list {
+  padding: 20px;
+  padding-bottom: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.item-in-cart {
+  padding-right: 20px;
+}
+
+.img-in-cart {
+  width: 39px;
+  height: 43px;
+}
+
+.img-in-cart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.to-card-link-in-cart {
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-delete-btn {
+  padding: 4px;
+  width: 10px;
+  height: 10px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.cart-info {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cart-info p:nth-child(odd) {
+  margin-right: 10px;
+}
+
+.to-cart-btn {
+  display: block;
+  margin: 20px;
+  padding: 14px 25px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 31px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.header-site-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.header-site-menu-item {
+  margin-left: 47px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header-site-menu-item:first-child,
+.header-site-menu-item:nth-child(6n) {
+  margin-left: 0;
+}
+
+.to-catalog-item-large {
+  margin-right: auto;
+}
+
+.header-site-menu-item:nth-child(4) {
+  margin-left: 51px;
+}
+
+.header-site-menu-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.subcatalog-list {
+  padding: 0;
+  padding-top: 33px;
+  padding-bottom: 27px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.subcatalog-link {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #000000;
+}

@@ -24,21 +24,21 @@
           <input class="search-input" id="search-field" name="search" type="text" placeholder="Текст поиска" value="" required>
           <button class="search-btn" type="submit">Найти</button>
         </form>
-        <ul class="user-menu">
+        <ul class="user-menu user-menu-logged-in">
           <li class="user-menu-item">
             <a class="user-menu-link" href="#">Войти</a>
           </li>
-          <li class="user-menu-item user-menu-item-hidden">
+          <li class="user-menu-item">
             <a class="user-menu-link" href="#">Коля Петухов</a>
           </li>
-          <li class="user-menu-item user-menu-item-hidden">
-            <a class="user-menu-link" href="#">Выйти</a>
+          <li class="user-menu-item">
+            <a class="user-menu-link user-menu-exit-link" href="#">Выйти</a>
           </li>
           <li class="user-menu-item">
             <a class="user-menu-link" href="#">Сравнить</a>
           </li>
           <li class="user-menu-item">
-            <a class="user-menu-link cart-link" href="#">Корзина</a>
+            <a class="user-menu-link cart-link" href="#"><span class="items-in-cart">2</span> Корзина</a>
             <div class="cart-popover">
               <ul class="cart-items-list">
                 <li class="item-in-cart">
@@ -73,7 +73,7 @@
             <a class="header-site-menu-link to-catalog-link-large" href="catalog.html">
               <h3>Каталог товаров</h3>
             </a>
-            <ul class="subcatalog-list-column">
+            <ul class="subcatalog-list">
               <li class="subcatalog-item">
                 <a class="subcatalog-link" href="#">Виртуальная реальность</a>
               </li>
