@@ -110,7 +110,7 @@
       <section class="slider">
         <div class="container">
           <ul class="slides-list">
-            <li class="slide-item">
+            <li class="slide-item slide-item-quadrocopter-one slide-item-shown">
               <div class="slide-img">
                 <img src="images/slider-1.png" width="560" height="560" alt="Квадрокоптер с лазером.">
               </div>
@@ -130,7 +130,7 @@
                 </dl>
               </div>
             </li>
-            <li class="slide-item">
+            <li class="slide-item slide-item-clock-one">
               <div class="slide-img">
                 <img src="images/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
               </div>
@@ -146,7 +146,7 @@
                 </dl>
               </div>
             </li>
-            <li class="slide-item">
+            <li class="slide-item slide-item-monopod-one">
               <div class="slide-img">
                 <img src="images/slider-3.png" width="560" height="560" alt="Палки для селфи.">
               </div>
@@ -190,34 +190,32 @@
           </div>
         </div>
       </section>
-      <section class="catalog-menu">
+      <section class="catalog-menu-section container">
         <h2 class="visually-hidden">Меню каталога</h2>
-        <div class="container">
-          <ul class="catalog-menu">
-            <li class="catalog-menu-item">
-              <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="catalog-menu-item">
-              <a class="catalog-menu-link" href="#">Моноподы для&nbsp;селфи</a>
-            </li>
-            <li class="catalog-menu-item">
-              <a class="catalog-menu-link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="catalog-menu-item">
-              <a class="catalog-menu-link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="catalog-menu-item">
-              <a class="catalog-menu-link" href="#">Умные часы</a>
-            </li>
-            <li class="catalog-menu-item">
-              <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="catalog-menu">
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
+          </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">Моноподы для&nbsp;селфи</a>
+          </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">Экшн-камеры</a>
+          </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">Фитнес-браслеты</a>
+          </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">Умные часы</a>
+          </li>
+          <li class="catalog-menu-item">
+            <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
+          </li>
+        </ul>
       </section>
       <section class="delivery-guarantee-credit" id="delivery-guarantee-credit-section">
         <div class="container">
-          <ul class="tab-memu-list" role="tablist">
+          <ul class="tab-menu-list" role="tablist">
             <li class="tab-menu-item tab-menu-item-selected" id="tab-1" role="tab" aria-selected="true" aria-controls="panel-1">
               <a class="btn tab-menu-btn" href="#">Доставка</a>
             </li>
@@ -230,7 +228,7 @@
           </ul>
           <div class="tabpanel-content tabpanel-content-shown" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
             <h2 class="section-title">Доставка</h2>
-            <p class="tabpanel-info">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            <p class="tabpanel-info">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы&nbsp;неплохо заработаем, поднимая его на ваш этаж.</p>
           </div>
           <div class="tabpanel-content" id="panel-2" role="tabpanel" aria-labelledby="tab-2">
             <h2 class="section-title">Гарантия</h2>
@@ -276,7 +274,7 @@
           <div class="subscribe-bottom">
             <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="email-field">Введите Ваш e-mail</label>
-              <input class="email-input" id="email-field" name="email" type="email" placeholder="Ваш e-mail" value="" required>
+              <input class="subscribe-email-input" id="subscribe-email-field" name="email" type="email" placeholder="Ваш e-mail" value="" required>
               <button class="subscribe-btn" type="submit">Подписаться</button>
             </form>
             <span class="free-label">Это бесплатно</span>
@@ -331,12 +329,12 @@
     </footer>
     <div class="modal-wrapper">
       <div class="modal modal-delivery">
-        <div class="modal-delivery-header-top">
+        <header class="modal-delivery-header">
           <h2 class="section-title">Доставка под заказ</h2>
           <button class="modal-close-btn" type="button">
             <span class="visually-hidden">Закрыть окно</span>
           </button>
-        </div>
+        </header>
         <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="input-wrapper">
             <label class="delivery-form-label" for="user-name-field">Ваше имя:</label>
@@ -345,7 +343,7 @@
           </div>
           <div class="input-wrapper">
             <label class="delivery-form-label" for="user-email-field">Ваш e-mail:</label>
-            <input class="delivery-email-input" id="user-email-field" name="email" type="email" placeholder="почта" value="" required>
+            <input class="delivery-email-input delivery-input-error" id="delivery-email-field" name="email" type="email" placeholder="почта" value="" required>
             <p class="delivery-form-text delivery-form-text-error">Забавный у вас адрес</p>
           </div>
           <div class="input-wrapper">
@@ -359,7 +357,7 @@
                 <span class="visually-hidden">Информация</span>
               </button>
               <div class="tooltip" id="tooltip-wrapper" role="tooltip">
-                <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</p>
+                <p class="tooltip-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к&nbsp;провозу багажа.</p>
               </div>
             </div>
             <div class="input-with-btns-wrapper">

@@ -111,6 +111,48 @@ img {
   cursor: pointer;
 }
 
+.section-title {
+  margin: 0;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+
+  background-color: transparent;
+  border: none;
+}
+
+.btn:nth-of-type(odd) {
+  margin-right: 20px;
+}
+
+.btn::after {
+  content: "";
+
+  display: block;
+  width: calc(100% + 40px * 2);
+  height: 8px;
+  background-color: #ffe17f;
+}
+
 .page-header {
   padding-top: 19px;
 
@@ -130,6 +172,7 @@ img {
   min-width: 359px;
   min-height: 40px;
   padding: 10px 48px;
+  margin-bottom: 30px;
 
   font-family: inherit;
   font-size: 16px;
@@ -144,8 +187,9 @@ img {
 
 .search-btn {
   width: 160px;
-  padding: 10px 56px;
+  padding: 10px 54px;
 
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -155,8 +199,9 @@ img {
 }
 
 .user-menu {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
   list-style-type: none;
 }
 
@@ -220,9 +265,9 @@ img {
 }
 
 .cart-items-list {
+  margin: 0;
   padding: 20px;
   padding-bottom: 0;
-  margin: 0;
   list-style-type: none;
 }
 
@@ -238,7 +283,7 @@ img {
 .img-in-cart img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .to-card-link-in-cart {
@@ -285,8 +330,8 @@ img {
 }
 
 .header-site-menu {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -321,10 +366,10 @@ img {
 }
 
 .subcatalog-list {
+  margin: 0;
   padding: 0;
   padding-top: 33px;
   padding-bottom: 27px;
-  margin: 0;
   list-style-type: none;
 }
 
@@ -369,8 +414,8 @@ img {
 }
 
 .footer-site-menu {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -395,8 +440,8 @@ img {
 }
 
 .footer-socials-list {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -410,4 +455,467 @@ img {
 
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+}
+
+.slider {
+  background-image: linear-gradient(to bottom, #ffe17f 0%, #ffe17f 151px, #ffffff 151px, #ffffff 100%);
+}
+
+.slides-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  counter-reset: slides-counter;
+}
+
+.slide-item {
+  display: none;
+  padding-top: 20px;
+  padding-bottom: 38px;
+
+  counter-increment: slides-counter;
+}
+
+.slide-item-shown {
+  display: block;
+}
+
+.slide-img {
+  width: 560px;
+  height: 560px;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide-info .section-title {
+  margin-bottom: 29px;
+}
+
+.slide-info .section-title::before {
+  content: "01";
+
+  font-size: 180px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.slide-text {
+  margin-bottom: 51px;
+}
+
+.slide-info .btn {
+  margin-bottom: 55px;
+}
+
+.slide-description-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slide-item .slide-description-item {
+  max-width: 160px;
+  margin-right: 20px;
+}
+
+.slide-item-monopod-one .slide-description-item {
+  max-width: 130px;
+  margin-right: 40px;
+}
+
+.slide-description-item dt {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.slide-description-item dd {
+  margin: 0;
+
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.slide-control-arrow {
+  display: block;
+  width: 20px;
+  height: 60px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.slide-controls {
+  max-width: 220px;
+}
+
+.slide-control {
+  margin-left: 20px;
+  width: 12px;
+  height: 12px;
+
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+
+.slide-control-current {
+  background-color: #000000;
+}
+
+.catalog-menu-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.catalog-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-menu-link {
+  display: block;
+  padding-top: 193px;
+  width: 100%;
+
+  font-family: "Raleway", sans-serif;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-menu-link::before {
+  content: "";
+
+  display: block;
+  width: 160px;
+  height: 160px;
+
+  background-color: #ffe17f;
+}
+
+.delivery-guarantee-credit {
+  padding-bottom: 70px;
+
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 103px, #f0f0f0 103px, #f0f0f0 392px, #ffffff 392px, #ffffff 100%);
+}
+
+.tab-menu-list {
+  margin: 0;
+  margin-bottom: 70px;
+  padding: 0;
+  padding-top: 64px;
+  padding-bottom: 65px;
+  list-style-type: none;
+
+  border-right: 7px solid #000000;
+}
+
+.tab-menu-item:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.tab-menu-item-selected {
+  background-color: #000000;
+}
+
+.tab-menu-item-selected .btn {
+  color: #ffe17f;
+}
+
+.tab-menu-item-selected .btn::after {
+  display: none;
+}
+
+.tabpanel-content {
+  display: none;
+  padding-top: 72px;
+  padding-right: 200px;
+}
+
+.tabpanel-content-shown {
+  display: block;
+}
+
+.tabpanel-content .section-title {
+  margin-bottom: 34px;
+}
+
+.tabpanel-info {
+  margin: 0;
+  margin-bottom: 72px;
+  width: 480px;
+}
+
+.delivery-banner-link {
+  display: block;
+  padding: 40px 135px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+}
+
+.delivery-banner-link::before {
+  content: "";
+
+  display: block;
+  width: 125px;
+  height: 100px;
+
+  background-color: #ffe17f;
+}
+
+.delivery-banner-link::after {
+  content: "";
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 50%;
+}
+
+.index-columns .section-title {
+  margin-bottom: 48px;
+}
+
+.index-columns .section-title::before {
+  content: "";
+
+  display: block;
+  margin-bottom: 40px;
+  width: 84px;
+  height: 7px;
+
+  background-color: #000000;
+}
+
+.about-us {
+  padding-bottom: 50px;
+}
+
+.about-text {
+  margin-bottom: 30px;
+}
+
+.about-list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about-item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.about-item::before {
+  content: "";
+
+  margin-right: 26px;
+  width: 8px;
+  height: 8px;
+
+  background-color: #ffc700;
+  border-radius: 50%;
+}
+
+.contacts {
+  padding-bottom: 50px;
+}
+
+.contacts-text {
+  margin: 0;
+}
+
+p.contacts-text:first-of-type,
+p.contacts-text:nth-of-type(3) {
+  margin-bottom: 30px;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contacts address {
+  font-style: normal;
+}
+
+.contacts-tel-link {
+  display: block;
+  margin-bottom: 30px;
+
+  color: inherit;
+}
+
+.subscribe {
+  padding-top: 64px;
+  padding-bottom: 56px;
+
+  background-color: #f0f0f0;
+}
+
+.subscribe-top {
+  margin-bottom: 144px;
+}
+
+.subscribe-text {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.subscribe-email-input {
+  padding: 11px 16px 14px;
+  width: 557px;
+  min-height: 57px;
+
+  font: inherit;
+
+  background-color: transparent;
+}
+
+.subscribe-email-input::placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.subscribe-btn {
+  padding: 18px 39px;
+  min-width: 253px;
+  min-height: 57px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: transparent;
+}
+
+.subscribe .free-label {
+  padding-left: 30px;
+}
+
+.modal {
+  padding: 80px 72px 60px;
+  width: 920px;
+  min-height: 568px;
+}
+
+.modal::after {
+  content: "";
+
+  display: block;
+  width: calc(100% - 2 * 2px);
+  height: 10px;
+
+  background-color: #f0f0f0;
+}
+
+.modal-delivery-header {
+  margin-bottom: 42px;
+}
+
+.modal-close-btn {
+  display: block;
+  width: 26px;
+  height: 26px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.delivery-form-label {
+  display: block;
+  margin-bottom: 14px;
+
+  line-height: 20px;
+  font-weight: 700;
+  /* В критериях запрещены дроби с более чем двумя знаками после запятой, но в Фигме написан letter-spacing -2%, поэтому я оставлю пока, но закомментирую - посмотрю потом, что по пиксель перфекту, если что - переведу в пиксели
+  letter-spacing: -0.002em; */
+  color: #000000;
+}
+
+.delivery-form input {
+  padding: 20px;
+  padding-right: 40px;
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+
+  background-color: #f0f0f0;
+  border: none;
+}
+
+.delivery-form-text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.delivery-form-text-error {
+  color: #ff3d3d;
+}
+
+.label-with-tooltip-wrapper .delivery-form-label {
+  margin-right: 8px;
+}
+
+.tooltip-btn {
+  width: 26px;
+  height: 26px;
+
+  background-color: #ffe17f;
+  border: none;
+  border-radius: 50%;
+}
+
+.tooltip {
+  padding: 19px;
+  padding-right: 17px;
+  width: 200px;
+  min-height: 160px;
+
+  background-color: #000000;
+  border-bottom: 10px #f0f0f0;
+}
+
+.tooltip-text {
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #ffffff;
+}
+
+.input-number-btn {
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  background-color: transparent;
+  border: none;
 }
