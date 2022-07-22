@@ -130,7 +130,7 @@ img {
   font-size: 18px;
   line-height: 21px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -155,6 +155,7 @@ img {
 
 .page-header {
   padding-top: 19px;
+  min-height: 226px;
 
   background-color: #ffe17f;
   background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 41px, #ffe17f 41px, #ffe17f 100%);
@@ -320,7 +321,7 @@ img {
   font-size: 18px;
   line-height: 31px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.2em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -348,6 +349,7 @@ img {
 
 .to-catalog-item-large {
   margin-right: auto;
+  padding-right: 60px;
 }
 
 .header-site-menu-item:nth-child(4) {
@@ -359,7 +361,7 @@ img {
   font-size: 18px;
   line-height: 21px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
@@ -427,7 +429,7 @@ img {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
@@ -663,7 +665,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   line-height: 23px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -680,6 +682,7 @@ img {
   background-color: #ffe17f;
 }
 
+/*Возможно, кружочек с иконкой "i" лучше кнопкой сделать, если что - переделаю. Еще хотел нагдядно продемонстрировать проявления болезни верстальщика, вызванную критериями, - "дивофобия" - боязнь лишних оберток))*/
 .delivery-banner-link::after {
   content: "";
 
@@ -806,7 +809,7 @@ p.contacts-text:nth-of-type(3) {
   font-size: 18px;
   line-height: 21px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
 
@@ -852,8 +855,7 @@ p.contacts-text:nth-of-type(3) {
 
   line-height: 20px;
   font-weight: 700;
-  /* В критериях запрещены дроби с более чем двумя знаками после запятой, но в Фигме написан letter-spacing -2%, поэтому я оставлю пока, но закомментирую - посмотрю потом, что по пиксель перфекту, если что - переведу в пиксели
-  letter-spacing: -0.002em; */
+  letter-spacing: -0.02em;
   color: #000000;
 }
 
@@ -918,4 +920,338 @@ p.contacts-text:nth-of-type(3) {
 
   background-color: transparent;
   border: none;
+}
+
+.catalog-main {
+  background-color: #f0f0f0;
+}
+
+.catalog-main-top {
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  background-color: #ffffff;
+}
+
+.catalog-main-top .section-title-hidden {
+  display: none;
+}
+
+.catalog-main-top .section-title {
+  margin-bottom: 16px;
+}
+
+.breadcrumbs-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs-item {
+  display: inline-block;
+}
+
+.breadcrumbs-link {
+  padding-right: 20px;
+  padding-left: 11px;
+
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.breadcrumbs-item:first-child .breadcrumbs-link {
+  padding-left: 0;
+}
+
+.breadcrumbs-link:not(:last-child)::after {
+  content: "";
+
+  display: inline-block;
+  width: 4px;
+  height: 7px;
+}
+
+.catalog-active-links-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-active-links-item {
+  display: none;
+}
+
+.catalog-active-links-item-shown {
+  display: inline-block;
+}
+
+.catalog-sections-columns {
+  padding-top: 20px;
+}
+
+.section-title-small {
+  margin: 0;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filters {
+  padding: 5px 60px 78px;
+}
+
+.filters .section-title-small {
+  margin-bottom: 60px;
+}
+
+.filters-form fieldset {
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 78px;
+
+  border: none;
+}
+
+.filters-title {
+  margin-bottom: 20px;
+
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.filters .input-label-wrapper {
+  margin: 0;
+}
+
+.filters-price {
+  padding-bottom: 60px;
+}
+
+.filters .range-scale {
+  width: 200px;
+  height: 2px;
+
+  background-color: #dcdcdc;
+}
+
+.filters .range-bar {
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.range-toggle {
+  width: 18px;
+  height: 18px;
+
+  background-color: #ebebeb;
+}
+
+.filters-price label {
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filters-colors {
+  padding-bottom: 35px;
+}
+
+.filters-bluetooth {
+  padding-bottom: 45px;
+}
+
+.filters-colors .input-label-wrapper:not(:last-of-type) {
+  margin-bottom: 17px;
+}
+
+.filters-bluetooth .input-label-wrapper:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.filters-colors .filter-label,
+.filters-bluetooth .filter-label {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.filters-colors .filter-label::before,
+.filters-bluetooth .filter-label::before {
+  content: "";
+
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.sorting {
+  padding: 40px;
+  padding-top: 0;
+}
+
+.sorting .sorting-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.sorting-select {
+  padding: 0;
+  padding-right: 33px;
+
+  font: inherit;
+  color: #000000;
+
+  background-color: transparent;
+  border: none;
+}
+
+.sorting .up-down-btn {
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.catalog-cards {
+  padding: 70px 40px 78px;
+
+  background-color: #ffffff;
+}
+
+.catalog-list {
+  margin: 0;
+  margin-bottom: 44px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-item-img {
+  width: 360px;
+  height: 380px;
+}
+
+.catalog-item-img img {
+  margin-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.catalog-label-new {
+  display: block;
+  padding: 19px 8px 20px;
+  width: 60px;
+  height: 60px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: transparent;
+}
+
+.catalog-item-title {
+  margin: 0;
+  max-width: 226px;
+
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.catalog-item-price {
+  line-height: 21px;
+}
+
+.catalog-load-more-btn {
+  display: block;
+  margin-bottom: 44px;
+  padding: 18px 20px;
+  width: 100%;
+  min-height: 55px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-align: center;
+
+  background-color: transparent;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  background-color: #ebebeb;
+}
+
+.pagination-item-backward {
+  margin-right: auto;
+}
+
+.pagination-item-forward {
+  margin-left: auto;
+}
+
+.pagination-item .pagination-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-width: 40px;
+  min-height: 40px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pagination-item-backward .pagination-link,
+.pagination-item-forward .pagination-link {
+  display: block;
+  padding: 25px 23px;
+  min-height: 71px;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #000000;
+}
+
+.pagination-item-backward .pagination-link {
+  min-width: 128px;
+}
+
+.pagination-item-forward .pagination-link {
+  min-width: 141px;
 }
