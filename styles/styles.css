@@ -121,11 +121,12 @@ img {
   color: #000000;
 }
 
-.btn {
+.btn-accent {
   display: inline-block;
+  margin-right: 20px;
   margin-bottom: 20px;
   padding: 10px 40px;
-  max-width: 300px;
+  max-width: 320px;
 
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -141,11 +142,7 @@ img {
   border: none;
 }
 
-.btn:nth-of-type(odd) {
-  margin-right: 20px;
-}
-
-.btn::after {
+.btn-accent::after {
   content: "";
 
   display: block;
@@ -1006,7 +1003,7 @@ img {
 }
 
 .filters {
-  padding: 5px 60px 78px;
+  padding: 5px 60px 58px;
 }
 
 .filters .section-title-small {
@@ -1095,6 +1092,10 @@ img {
   margin-right: 16px;
   width: 20px;
   height: 20px;
+}
+
+.filters .btn-accent {
+  margin-right: 0;
 }
 
 .sorting {
