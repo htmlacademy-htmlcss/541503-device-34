@@ -3081,6 +3081,8 @@ img {
 
 .catalog-load-more-btn:disabled {
   opacity: 0.3;
+
+  pointer-events: none;
 }
 
 .pagination-list {
