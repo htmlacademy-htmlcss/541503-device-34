@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="page-header">
+      <header class="page-header catalog-header">
         <h1 class="visually-hidden">Страница каталога магазина гаджетов Девайс</h1>
         <h2 class="visually-hidden">Шапка сайта</h2>
         <a class="header-logo-link" href="index.html">
@@ -86,7 +86,7 @@
         </ul>
         <ul class="header-site-menu">
           <li class="header-site-menu-item">
-            <a class="header-site-menu-link to-catalog-link to-catalog-link-subcatalog-list-invisible" href="catalog.html">
+            <a class="header-site-menu-link to-catalog-link" href="catalog.html">
               <h3>Каталог товаров</h3>
             </a>
             <div class="subcatalog">
@@ -98,10 +98,10 @@
                   <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a class="subcatalog-link subcatalog-link-active" href="#">Квадрокоптеры</a>
+                  <a class="subcatalog-link" href="#">Квадрокоптеры</a>
                 </li>
                 <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="catalog.html">Моноподы для селфи</a>
+                  <a class="subcatalog-link subcatalog-link-active" href="catalog.html">Моноподы для селфи</a>
                 </li>
                 <li class="subatalog-item">
                   <a class="subcatalog-link" href="#">Умные часы</a>
@@ -119,7 +119,7 @@
             <a class="header-site-menu-link" href="#">Гарантия</a>
           </li>
           <li class="header-site-menu-item">
-            <a class="header-site-menu-link" href="index.html#contacts-section">Контакты</a>
+            <a class="header-site-menu-link" href="index.html#contacts-section">Контакт<span class="last-letter">ы</span></a>
           </li>
         </ul>
       </header>
@@ -178,21 +178,17 @@
                     <button class="range-toggle range-toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
+                    <label class="range-input-label min-price-label" for="filter-min-price">от <span class="filters-price-from">0</span></label>
                     <button class="range-toggle range-toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
+                    <label class="range-input-label max-price-label" for="filter-max-price">до <span class="filters-price-to">5000</span></label>
                   </div>
                 </div>
               </div>
               <div class="range-inputs-wrapper">
-                <p class="input-label-wrapper">
-                  <label class="range-input-label min-price-label" for="filter-min-price">от <span class="filters-price-from">0</span></label>
-                  <input class="range-input min-price visually-hidden" id="filter-min-price" name="min-price" type="number" value="0">
-                </p>
-                <p class="input-label-wrapper">
-                  <label class="range-input-label max-price-label" for="filter-max-price">до <span class="filters-price-to">5000</span></label>
-                  <input class="range-input max-price visually-hidden" id="filter-max-price" name="max-price" type="number" value="5000">
-                </p>
+                <input class="range-input min-price visually-hidden" id="filter-min-price" name="min-price" type="number" value="0">
+                <input class="range-input max-price visually-hidden" id="filter-max-price" name="max-price" type="number" value="5000">
               </div>
             </fieldset>
             <fieldset class="filters-colors">
@@ -221,11 +217,11 @@
             <fieldset class="filters-bluetooth">
               <legend class="filters-title" lang="en">Bluetooth</legend>
               <p class="input-label-wrapper">
-                <input class="bluetooth-is-available visually-hidden" id="bluetooth-availability-true" name="true" type="radio" checked>
+                <input class="bluetooth-is-available visually-hidden" id="bluetooth-availability-true" name="bluetooth-availability" type="radio" checked>
                 <label class="filter-label" for="bluetooth-availability-true">Есть</label>
               </p>
               <p class="input-label-wrapper">
-                <input class="bluetooth-is-available visually-hidden" id="bluetooth-availability-false" name="false" type="radio">
+                <input class="bluetooth-is-available visually-hidden" id="bluetooth-availability-false" name="bluetooth-availability" type="radio">
                 <label class="filter-label" for="bluetooth-availability-false">Нет</label>
               </p>
             </fieldset>
@@ -241,6 +237,9 @@
               <option value="cheap">Дешевые</option>
               <option value="expensive">Дорогие</option>
             </select>
+            <span class="sorting-select-arrow">
+              <span class="visually-hidden">Выбрать принцип сортировки</span>
+            </span>
           </p>
           <div class="sorting-item up-down-btns">
             <button class="up-down-btn btn-up">
@@ -255,9 +254,10 @@
           <h2 class="visually-hidden">Моноподы для селфи</h2>
           <ul class="catalog-list catalog-list-monopods">
             <li class="catalog-item">
-              <a class="catalog-card-link">
+              <a class="catalog-card-link" href="#">
                 <div class="catalog-item-img">
                   <img src="images/product-1.jpg" width="360" height="380" alt="">
+                  <span class="catalog-card-details">Подробнее</span>
                 </div>
                 <span class="catalog-label-new">New</span>
                 <div class="catalog-item-info">
@@ -267,9 +267,10 @@
               </a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-card-link">
+              <a class="catalog-card-link" href="#">
                 <div class="catalog-item-img">
                   <img src="images/product-2.jpg" width="360" height="380" alt="">
+                  <span class="catalog-card-details">Подробнее</span>
                 </div>
                 <span class="catalog-label-new">New</span>
                 <div class="catalog-item-info">
@@ -279,9 +280,10 @@
               </a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-card-link">
+              <a class="catalog-card-link" href="#">
                 <div class="catalog-item-img">
                   <img src="images/product-3.jpg" width="360" height="380" alt="">
+                  <span class="catalog-card-details">Подробнее</span>
                 </div>
                 <span class="catalog-label-new">New</span>
                 <div class="catalog-item-info">
@@ -291,9 +293,10 @@
               </a>
             </li>
             <li class="catalog-item">
-              <a class="catalog-card-link">
+              <a class="catalog-card-link" href="#">
                 <div class="catalog-item-img">
                   <img src="images/product-4.jpg" width="360" height="380" alt="">
+                  <span class="catalog-card-details">Подробнее</span>
                 </div>
                 <span class="catalog-label-new">New</span>
                 <div class="catalog-item-info">
