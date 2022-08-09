@@ -746,17 +746,17 @@ img {
 }
 
 .header-site-menu-item {
+  margin-bottom: 20px;
   margin-left: 43px;
   padding-left: 0;
   padding-right: 0;
 }
 
-.header-site-menu-item:first-child,
-.header-site-menu-item:nth-child(6n) {
+.header-site-menu-item:first-child {
   margin-left: 0;
 }
 
-.header-site-menu-item:first-child {
+.header-site-menu-catalog-item {
   position: relative;
 
   margin-top: 3px;
@@ -1138,7 +1138,7 @@ img {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 
-  transition: background-color 3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
 .footer-socials-link:hover {
