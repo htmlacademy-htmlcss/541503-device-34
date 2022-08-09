@@ -1431,7 +1431,7 @@ img {
 .catalog-menu {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 40px;
+  gap: 40px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -2589,6 +2589,8 @@ img {
   font-size: 15px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+
+  transition: opacity 0.3s ease-out;
 }
 
 .min-price-label {
@@ -2667,22 +2669,79 @@ img {
 
 .bluetooth-is-available:checked + .filter-label::before {
   border-color: #000000;
+
+  background-image: url("../images/round.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.bluetooth-is-available:checked + .filter-label::after {
+.filters label:hover {
+  opacity: 0.6;
+
+  transition: opacity 0.3s ease-out;
+}
+
+.range-toggle:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.filters .range-toggle:focus::after {
   content: "";
 
   position: absolute;
-  top: 6px;
-  left: 6px;
+  left: -4px;
+  top: -4px;
 
-  width: 8px;
-  height: 8px;
+  display: block;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
 
-  background-color: #000000;
-  border-radius: 50%;
+  background-color: transparent;
 
-  transition: opacity 0.3s ease-out;
+  border: 2px solid #af4fff;
+}
+
+.filters input:focus + label::after {
+  content: "";
+
+  position: absolute;
+  left: -4px;
+  top: -4px;
+
+  display: block;
+  width: calc(20px + 4px * 2);
+  height: calc(20px + 4px * 2);
+
+  background-color: transparent;
+
+  border: 2px solid #af4fff;
+}
+
+.filters .range-toggle:focus::after,
+.filters .range-input:focus + label::after {
+  position: absolute;
+  left: -6px;
+  top: -6px;
+
+  display: block;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+
+  background-color: transparent;
+
+  border: 2px solid #af4fff;
+}
+
+.filters label:active {
+  opacity: 0.3;
+}
+
+.range-toggle:active {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.filters input:disabled + label {
+  opacity: 0.1;
 }
 
 .color-chooser-input:not(:checked) + .filter-label:hover::before,
