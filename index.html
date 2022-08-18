@@ -85,7 +85,7 @@
           </li>
         </ul>
         <ul class="header-site-menu">
-          <li class="header-site-menu-item">
+          <li class="header-site-menu-item header-site-menu-catalog-item">
             <a class="header-site-menu-link to-catalog-link" href="catalog.html">
               <h3>Каталог товаров</h3>
             </a>
@@ -119,7 +119,7 @@
             <a class="header-site-menu-link" href="#">Гарантия</a>
           </li>
           <li class="header-site-menu-item">
-            <a class="header-site-menu-link" href="#contacts-section">Контакт<span class="last-letter">ы</span></a>
+            <a class="header-site-menu-link" href="#contacts-section">Контакт<!--Знаю, что это плохая практика и в реальном проекте я бы этого элемента span не оставлял, но это единственный способ вместить эту ссылку в контейнер и при этом вписаться в требования по pixel perfect из-за letter spacing-а--><span class="last-letter">ы</span></a>
           </li>
         </ul>
       </header>
@@ -370,6 +370,7 @@
             <div class="delivery-name-input-label-wrapper">
               <input class="delivery-name-input" id="delivery-name-field" name="name" type="text" placeholder="Введите имя" value="" required>
               <label class="delivery-form-label" for="delivery-name-field">Ваше имя:</label>
+              <p class="delivery-form-text">Добавьте имя</p>
             </div>
           </div>
           <div class="input-content-wrapper">

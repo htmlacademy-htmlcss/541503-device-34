@@ -85,7 +85,7 @@
           </li>
         </ul>
         <ul class="header-site-menu">
-          <li class="header-site-menu-item">
+          <li class="header-site-menu-item header-site-menu-catalog-item">
             <a class="header-site-menu-link to-catalog-link" href="catalog.html">
               <h3>Каталог товаров</h3>
             </a>
@@ -178,17 +178,15 @@
                     <button class="range-toggle range-toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
+                    <input class="range-input min-price visually-hidden" id="filter-min-price" name="min-price" type="number" value="0">
                     <label class="range-input-label min-price-label" for="filter-min-price">от <span class="filters-price-from">0</span></label>
                     <button class="range-toggle range-toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
+                    <input class="range-input max-price visually-hidden" id="filter-max-price" name="max-price" type="number" value="5000">
                     <label class="range-input-label max-price-label" for="filter-max-price">до <span class="filters-price-to">5000</span></label>
                   </div>
                 </div>
-              </div>
-              <div class="range-inputs-wrapper">
-                <input class="range-input min-price visually-hidden" id="filter-min-price" name="min-price" type="number" value="0">
-                <input class="range-input max-price visually-hidden" id="filter-max-price" name="max-price" type="number" value="5000">
               </div>
             </fieldset>
             <fieldset class="filters-colors">
