@@ -624,7 +624,7 @@ img {
   position: absolute;
   left: 1px;
   right: 1px;
-  top: 5px;
+  top: 6px;
 
   display: block;
   width: 12px;
@@ -642,7 +642,7 @@ img {
   position: absolute;
   left: 1px;
   right: 1px;
-  top: 5px;
+  top: 6px;
 
   display: block;
   width: 12px;
@@ -1269,12 +1269,12 @@ img {
 .slide-item .section-title::before {
   position: absolute;
   right: 49px;
-  top: -40px;
+  top: -115px;
   z-index: -1;
 
   font-family: "Rubik", sans-serif;
   font-size: 180px;
-  line-height: 30px;
+  line-height: 180px;
   font-weight: 700;
   color: #ffffff;
 }
@@ -1993,6 +1993,7 @@ img {
   background-color: rgba(240, 240, 240, 0.9);
 }
 
+/*Добавить элементу div с классом "modal-container" класс "modal-container-shown" для появления модального окна*/
 .modal-container-shown {
   display: block;
 }
@@ -2170,8 +2171,7 @@ img {
   background-color: #dcdcdc;
 }
 
-.delivery-form input:focus,
-.input-number-btn:focus ~ .items-quantity-input {
+.delivery-form input:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
