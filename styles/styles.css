@@ -246,7 +246,7 @@ img {
 .search-input-label {
   position: absolute;
   left: 16px;
-  top: 12px;
+  top: 50%;
 
   display: block;
   width: 16px;
@@ -255,6 +255,8 @@ img {
   background-image: url("../images/icons.svg");
   background-repeat: no-repeat;
   background-position: -21px -182px;
+
+  transform: translateY(-50%);
 }
 
 .search-input:disabled + .search-input-label {
@@ -1358,7 +1360,7 @@ img {
 .slide-controls {
   position: absolute;
   right: 20px;
-  top: 367px;
+  bottom: 211px;
   z-index: 1;
 
   display: flex;
